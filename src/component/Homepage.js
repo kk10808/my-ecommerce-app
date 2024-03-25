@@ -1,7 +1,7 @@
 // Homepage.js
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import reviews from '../reviews';
+import reviews from '../data/reviews';
 
 // Header Component
 const Header = () => {
