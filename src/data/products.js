@@ -42,8 +42,7 @@ const product = [
     image: 'images/product6.jpg'
     },
     {
-    id: 7,
-    name: "Product 7",
+    id: 7,name: "Product 7",
     description: "Description for Product 7",
     price: 10.99,
     image: 'images/product7.jpg'
@@ -71,4 +70,3 @@ const product = [
     }
     ];
     export default product;
-    

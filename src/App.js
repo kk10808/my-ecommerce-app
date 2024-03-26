@@ -1,22 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-import Homepage from './component/Homepage.js'; // Updated import path
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import HomePage from './components/Homepage';
+import Productpage from './components/Productpage';
+
+// Placeholder for the login page
+const LoginPage = () => <p>Login Page</p>;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/products" element={<Productpage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </Router>
   );
 }
 
