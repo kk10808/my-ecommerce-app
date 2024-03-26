@@ -1,14 +1,20 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Homepage from './component/Homepage'; // Import the Homepage component
+import Homepage from './component/Homepage.js'; // Updated import path
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Homepage /> {/* Render the Homepage component */}
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
       </header>
     </div>
   );
