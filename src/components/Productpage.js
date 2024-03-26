@@ -4,18 +4,22 @@ import ProductList from './ProductList';
 import Cart from './Cart';
 import Footer from './Footer';
 
-const Productpage = () => {
+const ProductPage = () => {
+  // State for the shopping cart
   const [cart, setCart] = useState([]);
 
+  // Load cart from local storage on component mount
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
     setCart(savedCart);
   }, []);
 
+  // Save cart to local storage whenever it changes
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
+  // Function to add a product to the cart
   const addToCart = (product) => {
     const existingItemIndex = cart.findIndex(item => item.id === product.id);
     if (existingItemIndex !== -1) {
@@ -28,6 +32,7 @@ const Productpage = () => {
     }
   };
 
+  // Function to remove a product from the cart
   const removeFromCart = (productId) => {
     const existingItemIndex = cart.findIndex(item => item.id === productId);
     if (existingItemIndex !== -1) {
@@ -42,19 +47,15 @@ const Productpage = () => {
   };
   
   return (
-    
     <div className="product-page">
       <Header />
-        <table>
-          <tr>
-            <td><ProductList addToCart={addToCart} /></td>
-            <td style={{verticalAlign:'top'}}><Cart cart={cart} removeFromCart={removeFromCart} /></td>
-          </tr>
-        </table>
+      <div className="product-content">
+        <ProductList addToCart={addToCart} />
+        <Cart cart={cart} removeFromCart={removeFromCart} />
+      </div>
       <Footer />
     </div>
-    
   );
 }
 
-export default Productpage;
+export default ProductPage;
