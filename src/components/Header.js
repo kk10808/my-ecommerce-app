@@ -1,25 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../index.css';
+import '../styles.css';
 
-function Header() {
+function CustomHeader() {
   return (
     <>
-      <div className="header">
-        <div className="logo">
-          <img src="images/logo.png" alt="Logo" />
+      <div className="custom-header">
+        <div className="custom-logo">
+          <img src="custom-images/logo.png" alt="Custom Logo" />
         </div>
-        <div className="company-name">Company Name</div>
+        <div className="custom-company-name">Custom Company Name</div>
       </div>
-      <div className="navbar">
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/products">Products</Link>
-          <Link to="/login">Login</Link>
+      <div className="custom-navbar">
+        <div className="custom-nav-links">
+          <Link to="/">Custom Home</Link>
+          <Link to="/custom-products">Custom Products</Link>
+          <Link to="/custom-login">Custom Login</Link>
         </div>
       </div>
     </>
   );
 }
 
-export default Header;
+export default CustomHeader;
