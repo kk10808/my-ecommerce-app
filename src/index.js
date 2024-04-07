@@ -1,9 +1,9 @@
 
-//Joseph Kimambo, UCID: 30196921
-//Aly Masani, UCID: 30153947
-
-
-
+// Name        : index.js
+// Assignment  : Assignment 5
+// Group       : L03, 18
+// Authors     : Keerthana Krishnan, Raghav Adlakha
+// UCID        : 30175875, 30192109
 
 
 import React from 'react';

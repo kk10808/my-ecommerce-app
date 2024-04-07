@@ -4,9 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import HomePage from './components/Homepage';
 import Productpage from './components/Productpage';
-
-// Placeholder for the login page
-const LoginPage = () => <p>Login Page</p>;
+import LoginPage from './components/LoginPage'; // Import the LoginPage component
 
 function App() {
   return (
@@ -14,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<Productpage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} /> {/* Use the LoginPage component */}
       </Routes>
     </Router>
   );
