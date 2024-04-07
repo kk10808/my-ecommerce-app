@@ -24,20 +24,30 @@ const LoginForm = ({ switchToSignup }) => {
   return (
     <div>
       <h2>Login</h2>
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleLogin}>Login</button>
-      <button onClick={switchToSignup}>Switch to Signup</button>
+      <div>
+        <label>Username:</label>
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </div>
+      <div>
+        <label>Password:</label>
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+      <div>
+        <button onClick={handleLogin}>Login</button>
+      </div>
+      <div>
+        <button onClick={switchToSignup}>Switch to Signup</button>
+      </div>
     </div>
   );
 };

@@ -5,7 +5,6 @@
 // Authors     : Keerthana Krishnan, Raghav Adlakha
 // UCID        : 30175875, 30192109
 
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
